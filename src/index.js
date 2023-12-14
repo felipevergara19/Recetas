@@ -1,5 +1,6 @@
 const express = require ('express');
 const mongoose = require ('mongoose');
+const recepiRoutes = require('./routes/recipes')
 require('dotenv').config();
 
 const app = express();
