@@ -1,6 +1,7 @@
 const express = require ('express');
 const mongoose = require ('mongoose');
 const recepiRoutes = require('./routes/recipes')
+const ingredientRoutes = require('./routes/ingredients')
 require('dotenv').config();
 
 const app = express();
@@ -23,6 +24,7 @@ connectToDatabase();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use('/recepi', recepiRoutes);
+app.use('/ingredient', ingredientRoutes);
 
 const PORT = process.env.PORT || 3000;
 
