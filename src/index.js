@@ -20,6 +20,10 @@ const connectToDatabase = async() => {
 
 connectToDatabase();
 
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+app.use('/recepi', recepiRoutes);
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
