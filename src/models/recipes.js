@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose');
 const Ingredient = require ('./ingredients')
 
-const typeRecipe = ['Breakfast', 'Launch', 'Dessert'];
+const typeRecipe = ['Breakfast', 'Lunch', 'Dessert'];
 
 
 const recipeSchema = new mongoose.Schema({

@@ -7,7 +7,7 @@ router.post('/addIngredient', async (req,res) => {
   try {
     const newIngredient = new Ingredient(req.body);
     await newIngredient.save();
-    res.status(201).json({mensaje: 'Ingrediente Agregado Exitozamente', recip: newIngredient});  
+    res.status(201).json({mensaje: 'Ingrediente Agregado Exitozamente', ingredient: newIngredient});  
   } catch (error) {
     res.status(500).json({error: 'Error al agregar el ingrediente'});
   }
